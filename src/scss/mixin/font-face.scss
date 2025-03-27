@@ -5,7 +5,7 @@
       url('/fonts/#{$url}.woff2') format('woff');
     font-family: $font-family;
     font-weight: $weight;
-    font-style: $font-family;
+    font-style: $font-style;
     font-display: swap;
   }
 }
