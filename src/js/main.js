@@ -1,5 +1,4 @@
 import '../assets/scss/main.scss';
-import { Navigation } from 'swiper/modules';
 
 // components
 import { useTheme } from './components/theme';
