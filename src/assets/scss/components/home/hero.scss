@@ -2,53 +2,6 @@
   position: relative;
   padding: 87px 0 141px;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 50px;
-    left: 181px;
-    z-index: -1;
-    display: inline-block;
-    border-radius: 50%;
-    width: 551px;
-    height: 551px;
-    background: #fa7515;
-    opacity: 0.3;
-    filter: blur(220px);
-
-    @include mini-desktop {
-      left: 80px;
-      width: 351px;
-      height: 351px;
-    }
-
-    @include small-tablet {
-      top: 20px;
-      left: 40px;
-      width: 251px;
-      height: 251px;
-    }
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    display: inline-block;
-    border-radius: 50%;
-    width: 525px;
-    height: 525px;
-    background: var(--success-color-70);
-    filter: blur(180px);
-
-    @include mini-desktop {
-      width: 325px;
-      height: 325px;
-    }
-  }
-
   @include mini-desktop {
     padding: 77px 0 121px;
   }
