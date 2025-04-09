@@ -7,7 +7,9 @@ export default defineConfig({
   server: {
     port: 3000,
   },
+  base: '/coca-project/',
   root: './src',
+  publicDir: './src/assets',
   build: {
     outDir: '../dist',
     rollupOptions: {
