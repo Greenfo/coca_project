@@ -1,4 +1,12 @@
 .quote {
+  &::before {
+    top: -110%;
+  }
+
+  &::after {
+    bottom: -150%;
+  }
+
   &__container {
     @include flex-all-between;
     gap: 15px;
