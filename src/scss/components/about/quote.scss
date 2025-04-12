@@ -1,0 +1,23 @@
+.quote {
+  &__container {
+    @include flex-all-between;
+    gap: 15px;
+    border-top: 1px solid #7e8492;
+    border-bottom: 1px solid #7e8492;
+    padding-block: 80px;
+  }
+
+  &__title {
+    max-width: 495px;
+    font-weight: 600;
+    line-height: 120%;
+    color: var(--neutral-color-100);
+  }
+
+  &__descr {
+    max-width: 470px;
+    font-weight: 600;
+    line-height: 150%;
+    color: var(--neutral-color-100);
+  }
+}
