@@ -5,6 +5,10 @@
     text-align: center;
   }
 
+  @include small-mobile {
+    padding-bottom: 80px;
+  }
+
   &__container {
     margin-bottom: 135px;
   }

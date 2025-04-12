@@ -1,10 +1,8 @@
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 
 export const useHeroSlider = () => {
   new Swiper('.hero__slider', {
-    modules: [Navigation],
     slidesPerView: 1,
     spaceBetween: 32,
     breakpoints: {
@@ -13,6 +11,20 @@ export const useHeroSlider = () => {
       },
       769: {
         slidesPerView: 2,
+      },
+    },
+  });
+};
+
+export const useOurTeamSlider = () => {
+  new Swiper('.our-team__slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 32,
+    centeredSlides: true,
+    loop: true,
+    breakpoints: {
+      993: {
+        centeredSlides: false,
       },
     },
   });

@@ -5,6 +5,12 @@
     border-top: 1px solid #7e8492;
     border-bottom: 1px solid #7e8492;
     padding-block: 80px;
+
+    @include tablet {
+      gap: 30px;
+      flex-direction: column;
+      text-align: center;
+    }
   }
 
   &__title {

@@ -1,0 +1,130 @@
+.our-team {
+  padding-block: 160px;
+
+  &__top {
+    margin-bottom: 80px;
+  }
+
+  &__title,
+  &__descr {
+    @include tablet {
+      text-align: center;
+      margin-inline: auto;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    max-width: 700px;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+  }
+
+  &__descr {
+    max-width: 534px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 178%;
+    color: #7e8492;
+  }
+
+  &__slider {
+    position: relative;
+    margin-bottom: 100px;
+
+    &-btns {
+      @include flex-all-center;
+      position: absolute;
+      top: 126px;
+      left: 33%;
+      z-index: var(--z-index-2);
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      background-color: #fff;
+      transform: translateX(-50%);
+
+      @include mini-desktop {
+        left: 40%;
+      }
+
+      @include tablet {
+        display: none;
+      }
+
+      @include small-mobile {
+        top: 80px;
+        left: 93%;
+        display: flex;
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  &__slide {
+    max-width: 379px;
+
+    &-img {
+      margin-bottom: 16px;
+    }
+
+    &-info {
+      @include flex-all-between;
+      margin-bottom: 8px;
+    }
+
+    &-job {
+      font-weight: 500;
+      color: #7e8492;
+    }
+
+    &-socials {
+      display: flex;
+      gap: 8px;
+
+      &-link {
+        @include flex-all-center;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        background-color: var(--neutral-color-30);
+      }
+    }
+  }
+
+  &__bottom {
+    @include flex-all-between;
+
+    @include tablet {
+      @include flex-column;
+      gap: 30px;
+      text-align: center;
+    }
+
+    &-title {
+      max-width: 626px;
+      font-weight: 600;
+      line-height: 120%;
+      letter-spacing: -0.04em;
+      color: var(--neutral-color-100);
+    }
+
+    &-descr {
+      margin-bottom: 24px;
+      max-width: 506px;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 178%;
+      color: #7e8492;
+    }
+
+    &-link {
+      font-weight: 600;
+      line-height: 150%;
+      color: var(--neutral-color-100);
+    }
+  }
+}
