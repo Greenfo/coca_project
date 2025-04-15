@@ -1,0 +1,108 @@
+.hero {
+  padding: 95px 0 168px;
+
+  &__wrapper {
+    padding-left: 100px;
+    max-width: 1440px;
+
+    @include mini-desktop {
+      padding-left: 0;
+      max-width: calc(var(--container-width) + var(--container-padding) * 2);
+    }
+  }
+
+  &__title {
+    margin-bottom: 53px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+  }
+
+  &__subtitle {
+    margin-bottom: 128px;
+  }
+
+  &__slider {
+    &-control {
+      display: flex;
+      gap: 44px;
+      flex-wrap: wrap;
+      margin-bottom: 90px;
+
+      &-button {
+        font-weight: 600;
+        color: var(--neutral-color-150);
+        transition: color var(--transition);
+
+        &.mixitup-control-active {
+          text-decoration: underline;
+          color: var(--neutral-color-100);
+        }
+
+        &:hover {
+          text-decoration: underline;
+          color: var(--neutral-color-100);
+        }
+      }
+    }
+
+    &-btns {
+      @include flex-all-center;
+      position: absolute;
+      top: 126px;
+      left: 40%;
+      z-index: var(--z-index-2);
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      background-color: #fff;
+      transform: translateX(-50%);
+
+      @include mini-desktop {
+        left: 50%;
+      }
+
+      @include tablet {
+        display: none;
+      }
+
+      @include small-mobile {
+        top: 80px;
+        left: 93%;
+        display: flex;
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    &-slide {
+      max-width: 515px;
+
+      &-img,
+      &-title {
+        margin-bottom: 16px;
+      }
+
+      &-title {
+        font-weight: 700;
+        line-height: 125%;
+        color: var(--neutral-color-100);
+      }
+
+      &-descr {
+        max-width: 332px;
+        font-size: 20px;
+        color: var(--neutral-color-150);
+      }
+
+      &-head {
+        @include flex-justify-between;
+        margin-bottom: 24px;
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--neutral-color-150);
+      }
+    }
+  }
+}
