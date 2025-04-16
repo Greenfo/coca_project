@@ -4,9 +4,10 @@ import '/scss/blog.scss';
 import { useTheme } from './components/theme';
 import { useBurger } from './components/burger';
 import { useMixItUp } from './components/blog/mixitup';
-import { useBlogHeroSlider } from './components/blog/slider';
+import { useBlogHeroSlider, useBlogsSlider } from './components/blog/slider';
 
 useBlogHeroSlider();
+useBlogsSlider();
 useMixItUp();
 useTheme();
 useBurger();

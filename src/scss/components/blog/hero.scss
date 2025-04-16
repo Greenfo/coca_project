@@ -6,7 +6,7 @@
     max-width: 1440px;
 
     @include mini-desktop {
-      padding-left: 0;
+      padding-left: 15px;
       max-width: calc(var(--container-width) + var(--container-padding) * 2);
     }
   }
@@ -29,6 +29,10 @@
       gap: 44px;
       flex-wrap: wrap;
       margin-bottom: 90px;
+
+      @include mobile {
+        justify-content: center;
+      }
 
       &-button {
         font-weight: 600;

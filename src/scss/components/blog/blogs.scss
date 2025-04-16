@@ -1,0 +1,122 @@
+.blogs {
+  padding: 160px 0;
+
+  @include mobile {
+    padding: 80px 0;
+  }
+
+  &__container {
+    @include flex-all-between;
+    margin-bottom: 80px;
+
+    @include mobile {
+      gap: 15px;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__descr {
+    max-width: 435px;
+    font-weight: 500;
+    line-height: 178%;
+    color: var(--neutral-color-150);
+  }
+
+  &__btns {
+    @include flex-align-center;
+    gap: 16px;
+    justify-content: flex-end;
+
+    @include mini-desktop {
+      transform: translateY(5px);
+    }
+  }
+
+  &__btn {
+    @include flex-all-center;
+    border: 1px solid var(--neutral-color-40);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition:
+      background-color var(--transition),
+      border-color var(--transition);
+
+    @include small-mobile {
+      width: 40px;
+      height: 40px;
+    }
+
+    & svg path {
+      transition: fill var(--transition);
+    }
+
+    &:hover {
+      border-color: var(--neutral-color-100);
+      background-color: var(--neutral-color-100);
+
+      & svg path {
+        fill: var(--neutral-color-10);
+      }
+    }
+
+    &--next {
+      transform: rotate(-180deg);
+    }
+  }
+
+  &__slider {
+    &-wrapper {
+      padding-left: 100px;
+      max-width: 1400px;
+
+      @include mini-desktop {
+        padding-left: 15px;
+        max-width: calc(var(--container-width) + var(--container-padding) * 2);
+      }
+    }
+  }
+
+  &__slide {
+    max-width: 407px;
+
+    &-img,
+    &-descr {
+      margin-bottom: 24px;
+    }
+
+    &-title {
+      margin-bottom: 16px;
+      font-weight: 600;
+      line-height: 131%;
+      letter-spacing: -0.03em;
+      color: var(--neutral-color-100);
+    }
+
+    &-descr {
+      font-weight: 500;
+      line-height: 178%;
+      color: var(--neutral-color-150);
+    }
+
+    &-btn {
+      display: inline-block;
+      border: 1px solid #ced1d8;
+      padding: 16px 45px;
+      color: var(--neutral-color-100);
+      transition:
+        color var(--transition),
+        background-color var(--transition);
+
+      &:hover {
+        color: var(--neutral-color-10);
+        background-color: var(--neutral-color-100);
+      }
+    }
+  }
+}
