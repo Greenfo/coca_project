@@ -28,6 +28,7 @@
     "vite-plugin-minify": "^2.1.0"
   },
   "dependencies": {
+    "mixitup": "^3.3.2",
     "swiper": "^11.2.6"
   }
 }

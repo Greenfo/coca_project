@@ -1,0 +1,137 @@
+.hero {
+  padding: 105px 0 160px;
+
+  @include small-tablet {
+    text-align: center;
+  }
+
+  @include small-mobile {
+    padding-bottom: 80px;
+  }
+
+  &__container {
+    margin-bottom: 135px;
+  }
+
+  &__title {
+    margin-bottom: 118px;
+    max-width: 959px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+
+    @include mobile {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__subtitle {
+    @include small-tablet {
+      & br {
+        @include mini-desktop {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__info {
+    @include flex-all-between;
+    gap: 15px;
+
+    @include small-tablet {
+      gap: 30px;
+      flex-direction: column;
+    }
+
+    svg {
+      circle {
+        fill: var(--neutral-color-90);
+      }
+
+      path {
+        fill: var(--neutral-color-90);
+      }
+
+      rect {
+        fill: var(--neutral-color-90);
+      }
+    }
+  }
+
+  &__slide {
+    &-title {
+      margin-top: 24px;
+      margin-bottom: 8px;
+      font-weight: 600;
+      line-height: 150%;
+      color: var(--neutral-color-100);
+    }
+
+    &-descr {
+      margin-bottom: 32px;
+      max-width: 494px;
+      font-weight: 500;
+      line-height: 178%;
+      color: #7e8492;
+
+      @include small-tablet {
+        margin-inline: auto;
+      }
+    }
+
+    &-link {
+      display: inline-block;
+      padding: 14px 34px;
+      color: var(--neutral-color-10);
+      background-color: var(--neutral-color-100);
+    }
+  }
+
+  &__slider {
+    position: relative;
+    margin-left: 100px !important;
+
+    @include mini-desktop {
+      margin-left: 0 !important;
+    }
+
+    &-wrapper {
+      max-width: 1440px;
+
+      @include mini-desktop {
+        max-width: calc(var(--container-width) + var(--container-padding) * 2);
+      }
+    }
+
+    &-btns {
+      @include flex-all-center;
+      position: absolute;
+      top: 126px;
+      left: 40%;
+      z-index: var(--z-index-2);
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      background-color: #fff;
+      transform: translateX(-50%);
+
+      @include mini-desktop {
+        left: 50%;
+      }
+
+      @include tablet {
+        display: none;
+      }
+
+      @include small-mobile {
+        top: 80px;
+        left: 93%;
+        display: flex;
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
