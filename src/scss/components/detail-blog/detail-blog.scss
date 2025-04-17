@@ -1,0 +1,141 @@
+.detail-blog {
+  padding-top: 80px;
+  padding-bottom: 160px;
+
+  &__container {
+    max-width: 940px;
+  }
+
+  &__title {
+    margin-bottom: 80px;
+    max-width: 882px;
+    font-weight: 700;
+    color: var(--neutral-color-100);
+  }
+
+  &__top {
+    @include flex-justify-between;
+    align-items: end;
+    margin-bottom: 24px;
+    font-weight: 500;
+    color: var(--neutral-color-150);
+
+    @include mobile {
+      gap: 14px;
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
+  &__author {
+    display: flex;
+    gap: 24px;
+    font-weight: 500;
+    color: var(--neutral-color-150);
+
+    &-name {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 600;
+      line-height: 144%;
+      color: var(--neutral-color-100);
+    }
+
+    &-img {
+      border-radius: 50%;
+    }
+  }
+
+  &__img {
+    margin-bottom: 80px;
+  }
+
+  &__text {
+    margin-bottom: 56px;
+    font-weight: 400;
+    line-height: 178%;
+    color: var(--neutral-color-100);
+
+    &-title {
+      margin-bottom: 24px;
+      font-weight: 600;
+      color: var(--neutral-color-100);
+    }
+  }
+
+  &__bottom {
+    @include flex-justify-between;
+    gap: 15px;
+    align-items: start;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    &-img {
+      @include tablet {
+        margin-bottom: 8px;
+      }
+    }
+
+    &-socials {
+      margin-bottom: 14px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 162%;
+      color: var(--neutral-color-100);
+
+      @include tablet {
+        margin-bottom: 8px;
+      }
+
+      &-list {
+        display: flex;
+        gap: 32px;
+
+        @include tablet {
+          justify-content: center;
+          margin-bottom: 8px;
+        }
+      }
+
+      &-link {
+        @include flex-all-center;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        background-color: var(--neutral-color-130);
+
+        & path {
+          fill: var(--logo-color-text);
+        }
+      }
+    }
+
+    &-about {
+      margin-bottom: 16px;
+    }
+
+    &-info {
+      max-width: 645px;
+      color: var(--neutral-color-150);
+
+      &-name {
+        display: block;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 120%;
+        color: var(--neutral-color-100);
+        margin-block: 16px;
+      }
+    }
+
+    &-text {
+      font-weight: 400;
+      line-height: 178%;
+      color: var(--neutral-color-100);
+    }
+  }
+}
